@@ -79,6 +79,12 @@ Los problemas que se van a abordar con este trabajo son varios:
 
 ## Cronograma (fases del trabajo a realizar)
 
+### Fase 1: Desarrollo del servidor de tiempo
+
+
+
+### Fase 2: Desarrollo de la aplicación Android
+
 
 
 ## Recursos e instalaciones necesarias
