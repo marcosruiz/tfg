@@ -6,6 +6,8 @@ La firma digital es tan valida como la firma manuscrita por lo que puede tener c
 
 ## Pila de trabajo
 
+### Obligatorio
+
 - CRUD certificados autofirmados
 - Importar y exportar certificados
 - CRUD claves privadas de forma segura
@@ -19,19 +21,15 @@ La firma digital es tan valida como la firma manuscrita por lo que puede tener c
 - Comprobar las firmas digitales de un PDF (información e integridad de las firmas)
 - Cambiar de lenguaje (inglés y español)
 
-
+### Deseable
 
 - Firmar varios PDFs de manera automática
 - Login para entrar en la aplicación
 - Uso de huella digital para entrar en la aplicación
 - Firmar PDFs usando DNIe mediante OTG
-
-
-
 - Generar e integrar códigos de barras a partir de un código alfanumérico
 - Mostrar publicidad
 - Publicar aplicación en el Play Store
-
 
 
 Nota 1: la marca visible será personalizable, pudiendo añadir una imagen (jpg, png, ...), una marca de tiempo y/o autor de la firma.
