@@ -59,5 +59,25 @@ El objetivo de este trabajo fin de grado es implementar una aplicación Android 
 
 ## Cronograma (fases del trabajo a realizar)
 
+## Recursos e instalaciones necesarias
 
+- Un alumno
+- Un computador con Android Studio, VirtualBox, SDK de Android y conexión a internet
 
+## Plazos y costes
+
+- El plazo de finalización de ese proyecto es del 19 a 23 de Junio
+- El proyecto debe poderse realizar por un alumno durante un plazo de 1 mes a razon de 40 horas semanales de trabajo
+- Los recursos inicialmente comprometidos para este proyecto son un alumno durante 350 horas y un director durante 35 horas
+
+## Implicados
+
+- Javier Fabra Caro como Director
+- Marcos Ruiz Garcia como Autor
+
+## Riesgos del proyecto
+
+- Tiempo de desarrollo justo para la realización del proyecto, lo que puede dar como resultado que no se cumpla el plazo
+- Problemas de incompatibilidad entre un TSA y la libreria de manejo de PDFs itext5
+- Problemas de incompatibilidad con lectores de DNIe y Android
+- El proyecto puede no ser lo suficientemente grande para considerarse un TFG
