@@ -6,8 +6,9 @@ La firma digital es tan valida como la firma manuscrita por lo que tiene las mis
 
 ## Resumen
 
-El objetivo de este proyecto es el desarrollo de una aplicación Android para facilitar el proceso de la realización de firmas digitales en documentos PDF, estas firmas digitales son tan validas como las firmas manuscirtas por lo que tienen las mismas consecuencias legales. Signu permite la firma múltiple de documentos PDF con un sello visible en el mismo documento si así se desea, tambien permite la firma de numeorosos documentos PDF de forma automatica. Esta aplicación contiene herramientas para gestionar claves privadas de manera segura dentro del dispositivo Android y mecanismos para crear certificados autofirmados. Debido a que las firmas digitales necesitan de una autoridad de sellado de tiempo (TSA) para dar validez a la marca de tiempo que se incluye en los documentos PDF, este trabajo incluye el desarrollo de un servicio web que nos proporciona los mecanismos para crear y comprobar estas marcas de tiempo. Así pues, a través de un desarrollo incremental guiado por pequeñas iteraciones, y dirigido por pruebas (inspirado en la conocida aproximación TDD - Testing Driven Development) se ha ido construyendo un sistema capaz de firmar documentos PDF de manera digital que puedes llevar en tu propio bolsillo.
+El objetivo de este proyecto es el desarrollo de una aplicación Android para facilitar el proceso de la realización de firmas digitales en documentos PDF, estas firmas digitales son tan validas como las firmas manuscirtas por lo que tienen las mismas consecuencias legales. Signu permite la firma múltiple de documentos PDF con un sello visible en el mismo documento si así se desea, tambien permite la firma de numeorosos documentos PDF de forma automatica. Esta aplicación contiene herramientas para gestionar claves privadas de manera segura dentro del dispositivo Android y mecanismos para crear certificados autofirmados. Debido a que las firmas digitales necesitan una marca de tiempo este trabajo incluye el desarrollo de un servidor que nos proporciona los mecanismos para crear y comprobar estas marcas de tiempo a partir de una autoridad de sellado de tiempo (TSA). 
 
+Así pues, a través de un desarrollo incremental guiado por pequeñas iteraciones, y dirigido por pruebas (inspirado en la conocida aproximación TDD - Testing Driven Development) se va a construir un sistema capaz de firmar documentos PDF de manera digital que puedes llevar en tu propio bolsillo.
 
 ## Pila del producto
 
@@ -27,15 +28,15 @@ El objetivo de este proyecto es el desarrollo de una aplicación Android para fa
 - Comprobar las firmas digitales de un PDF (información e integridad de las firmas)
 - Cambiar de lenguaje (inglés y español)
 - Eliminar firmas digitales de un PDF
+- Crear un servidor de tiempo para incrustar marcas de tiempo validables en los documentos PDF firmados (esta marca de tiempo vendrá de una autoridad de sellado de tiempo o TSA haciendo uso del Network Time Protocol).
 
 ### Deseable
 
-- Encriptar y desencriptar docuementos PDF
+- Encriptar y desencriptar docuementos PDF (a partir de un certificado)
 - Firmar varios PDFs de manera automática
 - Login para entrar en la aplicación
 - Uso de huella digital para entrar en la aplicación
-- Crear un servidor de tiempo (TSA - Autortidad de sellado de tiempo) haciendo uso del Network Time Protocol para incrustar marcas de tiempo validables en los documentos PDF firmados
-- Firmar PDFs usando DNIe mediante OTG
+- Firmar PDFs usando DNIe (conectado a través de USB-OTG)
 - Generar e integrar códigos de barras a partir de un código alfanumérico
 - Mostrar publicidad
 - Publicar aplicación en el Play Store
@@ -48,24 +49,48 @@ Nota 2: El uso de interfaces de firma solo se usa para la firma multiple de PDFs
 
 ## Objetivos y problemas abordados
 
-El objetivo de este trabajo fin de grado es implementar una aplicación Android que permita la firma multiple de documentos PDF y el guardado seguro de claves privadas.
+En un mundo donde el uso de papel se está reduciendo dia a dia debido a las comodidades que aporta el formato digital es llamativo que todas las aplicaciones Android que permiten la firma digital multiple de documentos PDF son de pago o bien ofrecen unas funcionalidades extremadamente limitadas. Debido a esta carencia de aplicaciones se ha decidido realizar un trabajo fin de grado para cubrir esta necesidad desarrollando una aplicación Android de firma digital multiple de documentos PDF, es decir, el objetivo de este trabajo fin de grado es implementar una aplicación Android que permita la firma digital multiple de documentos PDF (con o sin sello visible en el mismo documento PDF) y el guardado seguro de claves privadas. Esta aplicación hará uso de un servidor de tiempo para crear marcas de tiempo validables (el cual también será desarrollado para este trabajo y deberá hacer uso de un TSA).
+
+Los problemas que se van a abordar con este trabajo son varios:
+
+- Guardado seguro de claves privadas
+- Firma multiple de documentos PDF (con marca visible si así se desea)
+- Creación de un servidor de tiempo el cual hace uso de un TSA (autoridad de sellado de tiempo)
+
 
 ## Metodología (enfoque y herramientas)
 
+### Enfoque
+
 - Desarrollo continuo incremental (similar al usado en Metodologias Ágiles)
 - TDD (Test Driven Development)
+
+### Herramientas
+
 - Android Studio
 - SDK de Android
 - VirtualBox/ GenyMotion
 - Lenguaje Java y sus librerias estandar
 - Libreria Java itext5
+- JUnit para la realización de tests unitarios
+
+- Node
+- MongoDB
 
 ## Cronograma (fases del trabajo a realizar)
+
+
 
 ## Recursos e instalaciones necesarias
 
 - Un alumno
 - Un computador con Android Studio, VirtualBox, SDK de Android y conexión a internet
+
+## Requisitos no funcionales
+
+- Conexión a internet (solo si se exige una marca de tiempo de un TSA externo)
+- Android 4.1 o superior
+- Opcional: Dispositivo con lector de huellas dactilares
 
 ## Plazos y costes
 
