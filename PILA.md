@@ -23,11 +23,14 @@ El objetivo de este proyecto es el desarrollo de una aplicación Android para fa
 - Crear X interfaces de firma para permitir la firma digital multiple de un documento pdf con marca visible
 - Firmar interfaz de firma dejando una marca visible
 - Importar y exportar PDFs
+- Visualización de documentos PDF
 - Comprobar las firmas digitales de un PDF (información e integridad de las firmas)
 - Cambiar de lenguaje (inglés y español)
+- Eliminar firmas digitales de un PDF
 
 ### Deseable
 
+- Encriptar y desencriptar docuementos PDF
 - Firmar varios PDFs de manera automática
 - Login para entrar en la aplicación
 - Uso de huella digital para entrar en la aplicación
